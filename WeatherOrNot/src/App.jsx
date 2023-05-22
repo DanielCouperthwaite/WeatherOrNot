@@ -8,7 +8,7 @@ function App() {
 
   return (
     <>
-      <div>
+      <div className = "whole">
         <Header />
         <WeatherContent />
       </div>

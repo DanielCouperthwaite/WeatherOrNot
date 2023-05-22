@@ -26,8 +26,7 @@ const WeatherInfo = ({searchTerm}) => {
     return (
         <>
             <div className="weather-info">
-                <p>{weatherInfo.city_name}</p>
-                {/* {console.log({weatherInfo[0].data[0]['temp']}}) */}
+                <p>{weatherInfo.city_name}, {weatherInfo.country_code}</p>
                 <h2>{weatherInfo['temp']} °C</h2>
                 <p>Feels like {weatherInfo['app_temp']} °C</p>
                 {/* <p>{weatherInfo['weather'].description}</p> */}
