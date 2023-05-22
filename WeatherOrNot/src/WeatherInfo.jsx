@@ -12,22 +12,22 @@ const WeatherInfo = ({weatherInfo, setWeatherInfo}) => {
             return res.json()
         })
         .then((data) => {
-            console.log('line 15 data', data)
+            console.log('line 15 data', data.data[0]['temp'])
             //data is now london
-            setWeatherInfo(data)
+            setWeatherInfo(data.data[0])
+            console.log(weatherInfo)
         });
     }, [])
 
-    console.log('weatherinfo', weatherInfo[1][0])
+ 
 
     return (
         <>
             <div className="weather-info">
                 <h2>london</h2>
-               {console.log('the thing we want', weatherInfo.data)}
                 {/* {console.log({weatherInfo[0].data[0]['temp']}}) */}
-                {/* <p>{weatherInfo['weather'].icon}</p>
-                <p>{weatherInfo['weather'].description}</p> */}
+                <p>{weatherInfo['temp']}</p>
+                {/* <p>{weatherInfo['weather'].description}</p> */}
             </div>
         </>
     )
