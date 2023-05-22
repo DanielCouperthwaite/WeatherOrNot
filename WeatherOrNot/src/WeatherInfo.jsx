@@ -1,33 +1,40 @@
 import { useEffect, useState } from "react"
 
-const WeatherInfo = ({weatherInfo, setWeatherInfo}) => {
+const WeatherInfo = ({searchTerm}) => {
 
-    // const [city, setCity] = useState(["Raleigh"])
+    
 
+    const [weatherInfo, setWeatherInfo] = useState([])
+
+    
+    console.log(searchTerm)
 
     useEffect(() => {
-        fetch(`https://api.weatherbit.io/v2.0/current?city=london&key=a5c52b519b3142cbbefba91278797339`)
+        fetch(`https://api.weatherbit.io/v2.0/current?city=${searchTerm}&key=a5c52b519b3142cbbefba91278797339`)
         .then((res) => {
         
             return res.json()
         })
         .then((data) => {
-            console.log('line 15 data', data.data[0]['temp'])
-            //data is now london
             setWeatherInfo(data.data[0])
             console.log(weatherInfo)
         });
-    }, [])
+    }, [searchTerm])
 
  
 
     return (
         <>
             <div className="weather-info">
-                <h2>london</h2>
+                <p>{weatherInfo.city_name}</p>
                 {/* {console.log({weatherInfo[0].data[0]['temp']}}) */}
-                <p>{weatherInfo['temp']}</p>
+                <h2>{weatherInfo['temp']} °C</h2>
+                <p>Feels like {weatherInfo['app_temp']} °C</p>
                 {/* <p>{weatherInfo['weather'].description}</p> */}
+                <p>{(Math.floor(weatherInfo['precip'])/1000)} mm/hr Precipitation</p>
+                <p>{weatherInfo['wind_spd']} km/h Wind {weatherInfo['wind_cdir']}</p>
+                <p>Sunrise: {weatherInfo.sunrise}</p>
+                <p>Sunset: {weatherInfo.sunset}</p>
             </div>
         </>
     )

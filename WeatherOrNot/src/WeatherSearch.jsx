@@ -1,12 +1,31 @@
-const WeatherSearch = () => {
+import { useState } from 'react';
+
+const WeatherSearch = ({ setSearchTerm }) => {
+   
+    const [newSearchTerm, setNewSearchTerm] = useState('')
+
+   const handleSubmit = (event) => {
+    event.preventDefault();
+
+    setSearchTerm(newSearchTerm)
+   }
+   
     return (
         <>
-        <div className="weather-search">
+        <form className="weather-search" onSubmit={handleSubmit}>
+        
+            <input 
+                type='text' 
+                placeholder='eg. Toronto'
+                value={newSearchTerm}
+                onChange={(event) => {
+                    console.log(event.target.value)
+                    setNewSearchTerm(event.target.value)
+                }}
+            />
+            <button style={{marginLeft: '10px'}}>Search</button>
 
-            <p>Search bar goes here</p>
-
-
-        </div>
+        </form>
         </>
     )
     
