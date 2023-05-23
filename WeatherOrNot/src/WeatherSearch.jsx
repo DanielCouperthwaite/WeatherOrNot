@@ -1,35 +1,32 @@
 import { useState } from 'react';
 
 const WeatherSearch = ({ setSearchTerm }) => {
-   
-    const [newSearchTerm, setNewSearchTerm] = useState('')
 
-   const handleSubmit = (event) => {
-    event.preventDefault();
+const [newSearchTerm, setNewSearchTerm] = useState('')
 
-    setSearchTerm(newSearchTerm)
-   }
+const handleSubmit = (event) => {
+event.preventDefault();
+setSearchTerm(newSearchTerm)
+}
    
     return (
         <>
-        <form className="weather-search" onSubmit={handleSubmit}>
-        
+        <form className="weather-search" onSubmit={handleSubmit} id='weather-search-bar'>
             <input 
                 type='text' 
                 placeholder='eg. Toronto'
                 value={newSearchTerm}
                 onChange={(event) => {
-                    console.log(event.target.value)
                     setNewSearchTerm(event.target.value)
                 }}
+                id='weather-search-text-box'
+                aria-label='Search by City'
             />
-            <button style={{marginLeft: '10px'}}>Search</button>
-
+            <label htmlFor='weather-search-text-box'></label>
+            <button style={{marginLeft: '10px'}} aria-label='Search by City'>Search</button>
         </form>
         </>
-    )
-    
-   
+    )  
 }
 
-export default WeatherSearch
+export default WeatherSearch;

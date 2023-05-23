@@ -5,19 +5,16 @@ import WeatherInfo from './WeatherInfo';
 
 const WeatherContent = () => {
 
-const [searchTerm, setSearchTerm] = useState('toronto')
+    const [searchTerm, setSearchTerm] = useState('toronto')
 
     return (
         <>
-            <div>
+            <section className='weather-content' id='weather-content'>
                 <WeatherSearch setSearchTerm={setSearchTerm}/>
                 <WeatherInfo searchTerm={searchTerm}/>
-            </div>
-        
+            </section>
         </>
     )
-
-
 }
 
 export default WeatherContent;

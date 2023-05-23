@@ -1,9 +1,9 @@
 const Header = () => {
     return (
-        <div className='title'>
+        <header className='title'>
             <h1>WeatherOrNot</h1>
-            <p>Rain? Snow? Wind? Find out... With WeatherOrNot</p>
-        </div>
+            <p className="description">Rain? Snow? Wind? Find out... With WeatherOrNot</p>
+        </header>
     )
 }
 
