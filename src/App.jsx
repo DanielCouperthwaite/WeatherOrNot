@@ -1,20 +1,20 @@
 import './App.css'
 import Header from './Header'
 import WeatherContent from './WeatherContent'
-import video from './assets/clouds.mp4'
-//
+import Background from './Background'
+
 function App() {
 
   return (
+    <>
     <main className="whole" alt="rolling clowds on a light blue sky">
-      <section className="background">
-        <video id="myVideo" autoPlay={"autoplay"} muted preLoad="auto" loop ><source src={video} type="video/mp4" alt="moving blue particles swirling on a light blue background"/></video>
-      </section>
+        <Background />
       <section className = "content-box">
         <Header />
         <WeatherContent />
       </section>
     </main>
+    </>
   )
 }
 
