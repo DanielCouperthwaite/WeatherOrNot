@@ -1,11 +1,13 @@
 import { useEffect, useState } from "react"
 
+
 const WeatherInfo = ({searchTerm}) => {
 
 const [weatherInfo, setWeatherInfo] = useState([])
 
+
 useEffect(() => {
-    fetch(`https://api.weatherbit.io/v2.0/current?city=${searchTerm}&key=b3051d40ff1b44b187f2bc188f41e45e`)
+    fetch(`https://api.weatherbit.io/v2.0/current?city=${searchTerm}&key=${import.meta.env.VITE_API_KEY}`)
     .then((res) => {
         return res.json()
     })
