@@ -24,17 +24,21 @@ Enter the folder that has been created by using `cd WeatherOrNot` in terminal.
 To run the app locally, you will need Node. Run the command `npm install` to download the relevant dependencies.
 
 3. Run dev app locally
-Finally, `npm run dev` will deploy WeatherOrNot from local host. 
+Running `npm run dev` will deploy WeatherOrNot from local host. 
+
+4. Create an API account
+Go to https://www.weatherbit.io/ and create a free account in order to get an API key. 
+
+5. Environment Variable
+Finally, create a .env file (similar to .env (example)) and add your API key value.
 
 
 ## Relevant Links
 
 
-Alessandro Frondini: Github & Linkedin
-
-Daniel Couperthwaite: Github & Linkedin
+Written by Daniel Couperthwaite (https://www.linkedin.com/in/danielcouperthwaite/) and Alessandro Frondini (https://www.linkedin.com/in/alefrondini/)
 
 
 
 Feedback:
-Feel free to post bugs here or send a PR.
+Feel free to post bugs at https://github.com/DanielCouperthwaite/WeatherOrNot/issues or send a PR.
