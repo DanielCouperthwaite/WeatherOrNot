@@ -5,7 +5,7 @@ const WeatherInfo = ({searchTerm}) => {
 const [weatherInfo, setWeatherInfo] = useState([])
 
 useEffect(() => {
-    fetch(`https://api.weatherbit.io/v2.0/current?city=${searchTerm}&key=a5c52b519b3142cbbefba91278797339`)
+    fetch(`https://api.weatherbit.io/v2.0/current?city=${searchTerm}&key=b3051d40ff1b44b187f2bc188f41e45e`)
     .then((res) => {
         return res.json()
     })
