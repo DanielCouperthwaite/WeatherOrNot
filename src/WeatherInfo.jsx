@@ -7,7 +7,8 @@ const [weatherInfo, setWeatherInfo] = useState([])
 
 
 useEffect(() => {
-    fetch(`https://api.weatherbit.io/v2.0/current?city=${searchTerm}&key=${import.meta.env.VITE_API_KEY}`)
+    // fetch(`https://api.weatherbit.io/v2.0/current?city=${searchTerm}&key=${import.meta.env.VITE_API_KEY}`)
+    fetch(`http://api.weatherapi.com/v1/current.json?key=${import.meta.env.VITE_API_KEY}&q=${searchTerm}&aqi=no`)
     .then((res) => {
         return res.json()
     })
@@ -15,7 +16,7 @@ useEffect(() => {
         setWeatherInfo(data.data[0])
     });
 }, [searchTerm])
-
+ 
 return (
     <>
         <section className="weather-info" id="weather-info">
