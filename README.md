@@ -38,6 +38,9 @@ Finally, create a .env file (similar to .env (example)) and add your API key val
 
 Written by Daniel Couperthwaite (https://www.linkedin.com/in/danielcouperthwaite/) and Alessandro Frondini (https://www.linkedin.com/in/alefrondini/)
 
+https://www.weatherbit.io/ for the source of our api weather information.
+
+Once again, you can check out the live hosted site here: https://weatherornot4114.netlify.app/
 
 
 Feedback:
