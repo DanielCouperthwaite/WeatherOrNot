@@ -15,13 +15,15 @@ console.log('terms', searchTerm);
             return res.json()
         })
         .then((data) => {
+            console.log(searchTerm)
+            console.log(searchTerm)
             console.log('data', data.location.name);
             console.log(import.meta.env.VITE_API_KEY, searchTerm);
             console.log('state1', weatherInfo);
             setWeatherInfo(data)
             setIsLoading(false)
         })
-    }, [])
+    }, [searchTerm])
     
     // const cityName= weatherInfo.location.name;
 
