@@ -21,20 +21,21 @@ console.log('terms', searchTerm);
             setWeatherInfo(data)
             setIsLoading(false)
         })
-    }, [searchTerm])
+    }, [])
     
     // const cityName= weatherInfo.location.name;
 
     return (
         <>
             <section className="weather-info" id="weather-info">
-                <p>{isLoading === true ? 'true' : 'false'}</p>
-                {/* <h2>{weatherInfo['temp']} °C</h2>
-                <p>Feels like {weatherInfo['app_temp']} °C</p>
+                <p>{isLoading === true ? 'true' : weatherInfo['location']['name']}</p>
+                <p>{isLoading === true ? 'true' : weatherInfo['location']['country']}</p>
+                <h2>{isLoading === true ? 'true' : weatherInfo['current']['temp_c']} °C</h2>
+                {/* <p>Feels like {weatherInfo['app_temp']} °C</p>
                 <p>{(Math.floor(weatherInfo['precip'])/1000)} mm/hr Precipitation</p>
                 <p>{weatherInfo['wind_spd']} km/h Wind {weatherInfo['wind_cdir']}</p>
                 <p>Sunrise: {weatherInfo.sunrise}</p>
-                <p>Sunset: {weatherInfo.sunset}</p> */}
+                <p>Sunset: {weatherInfo.sunset}</p>  */}
             </section>
         </>
         )
