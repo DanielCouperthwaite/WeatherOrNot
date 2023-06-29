@@ -14,7 +14,7 @@ setSearchTerm(newSearchTerm)
         <form className="weather-search" onSubmit={handleSubmit} id='weather-search-bar'>
             <input 
                 type='text' 
-                placeholder='eg. Toronto'
+                placeholder='eg. Manchester'
                 value={newSearchTerm}
                 onChange={(event) => {
                     setNewSearchTerm(event.target.value)

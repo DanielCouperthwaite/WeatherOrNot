@@ -5,7 +5,7 @@ import WeatherInfo from './WeatherInfo';
 
 const WeatherContent = () => {
 
-    const [searchTerm, setSearchTerm] = useState('toronto')
+    const [searchTerm, setSearchTerm] = useState('manchester')
 
     return (
         <>
