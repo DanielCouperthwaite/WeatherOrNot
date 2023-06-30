@@ -17,7 +17,8 @@ function App() {
       
     </main>
     <footer>
-        <small>Created By <a target="_blank" href="https://www.linkedin.com/in/alefrondini/">Alessandro Frondini</a> & <a target="_blank" href="https://www.linkedin.com/in/danielcouperthwaite/">Daniel Couperthwaite</a></small>
+        <medium>Created By <a target="_blank" href="https://www.linkedin.com/in/alefrondini/">Alessandro Frondini</a> & <a target="_blank" href="https://www.linkedin.com/in/danielcouperthwaite/">Daniel Couperthwaite</a></medium>
+        <p><small><a href="https://www.flaticon.com/free-icons/cloud" title="cloud icons">Cloud icons created by Freepik - Flaticon</a></small></p>
     </footer>
     </>
   )
