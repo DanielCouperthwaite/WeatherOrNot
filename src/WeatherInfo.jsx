@@ -10,7 +10,7 @@ const [isLoading, setIsLoading] = useState(true);
 
 console.log('terms', searchTerm);
     useEffect(() => {
-        fetch(`http://api.weatherapi.com/v1/current.json?key=${import.meta.env.VITE_API_KEY}&q=${searchTerm}&aqi=no`)
+        fetch(`https://api.weatherapi.com/v1/current.json?key=${import.meta.env.VITE_API_KEY}&q=${searchTerm}&aqi=no`)
         .then((res) => {
             return res.json()
         })
