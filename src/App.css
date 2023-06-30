@@ -74,6 +74,7 @@ body {
   padding: 5px;
   border-radius: 30px;
   z-index: 2;
+  display: flex;
   /* opacity: 77%; */
 
 }
