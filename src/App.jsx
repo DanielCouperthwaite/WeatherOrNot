@@ -14,7 +14,11 @@ function App() {
         <Header />
         <WeatherContent />
       </section>
+      
     </main>
+    <footer>
+        <small>Created By <a target="_blank" href="https://www.linkedin.com/in/alefrondini/">Alessandro Frondini</a> & <a target="_blank" href="https://www.linkedin.com/in/danielcouperthwaite/">Daniel Couperthwaite</a></small>
+    </footer>
     </>
   )
 }

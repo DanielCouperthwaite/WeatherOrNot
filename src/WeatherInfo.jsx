@@ -29,7 +29,7 @@ console.log('terms', searchTerm);
         <>
             <section className="weather-info" id="weather-info">
                 
-                <p>{isLoading === true ? 'true' : weatherInfo['location']['name']}, {isLoading === true ? 'true' : weatherInfo['location']['country']}  <p>{isLoading === true ? 'true' : weatherInfo['location']['localtime']}</p></p>
+                <p><strong>{isLoading === true ? 'true' : weatherInfo['location']['name']}, {isLoading === true ? 'true' : weatherInfo['location']['country']}</strong>  <p>{isLoading === true ? 'true' : weatherInfo['location']['localtime']}</p></p>
                 <img src={isLoading === true? 'true' : weatherInfo['current']['condition']['icon']}></img>
                 <h2>{isLoading === true ? 'true' : weatherInfo['current']['temp_c']} °C</h2>
                 <p>Feels Like {isLoading === true ? 'true' : weatherInfo['current']['feelslike_c']} °C</p>
