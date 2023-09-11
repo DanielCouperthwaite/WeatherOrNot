@@ -6,6 +6,11 @@ You can see it in action at https://weatherornot4114.netlify.app/ .
 
 Written by Alessandro Frondini and Daniel Couperthwaite.
 
+## Screenshots
+<div style="justify-content: center;">
+  <img src="./src/assets/weatherornot.png" width="200" alt="Screenshot app">
+</div>
+
 
 
 # Getting Started
